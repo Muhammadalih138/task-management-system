@@ -45,11 +45,27 @@ export default function LoginPage() {
         <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Email Address</label>
-            <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:border-indigo-600 transition-colors" placeholder="you@example.com"/>
+            {/* Added text-black utility below */}
+            <input 
+              type="email" 
+              required 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 text-black focus:outline-none focus:border-indigo-600 transition-colors" 
+              placeholder="you@example.com"
+            />
           </div>
           <div>
             <label className="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1">Password</label>
-            <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:border-indigo-600 transition-colors" placeholder="••••••••"/>
+            {/* Added text-black utility below */}
+            <input 
+              type="password" 
+              required 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 text-black focus:outline-none focus:border-indigo-600 transition-colors" 
+              placeholder="••••••••"
+            />
           </div>
           
           <Button type="submit" disabled={loading} className="w-full mt-2 py-2.5">
