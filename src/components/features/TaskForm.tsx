@@ -50,18 +50,37 @@ export default function TaskForm({ onTaskCreated }: TaskFormProps) {
 
       <div>
         <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Task Title</label>
-        <input type="text" required value={title} onChange={(e) => setTitle(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:border-indigo-600" placeholder="e.g., Design database model schema" />
+        {/* Added text-black utility below */}
+        <input 
+          type="text" 
+          required 
+          value={title} 
+          onChange={(e) => setTitle(e.target.value)} 
+          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 text-black focus:outline-none focus:border-indigo-600" 
+          placeholder="e.g., Design database model schema" 
+        />
       </div>
 
       <div>
         <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Description (Optional)</label>
-        <textarea value={description} onChange={(e) => setDescription(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:border-indigo-600 h-20 resize-none" placeholder="Add more contextual notes..." />
+        {/* Added text-black utility below */}
+        <textarea 
+          value={description} 
+          onChange={(e) => setDescription(e.target.value)} 
+          className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 text-black focus:outline-none focus:border-indigo-600 h-20 resize-none" 
+          placeholder="Add more contextual notes..." 
+        />
       </div>
 
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Priority</label>
-          <select value={priority} onChange={(e) => setPriority(e.target.value as any)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:border-indigo-600">
+          {/* Added text-black utility below */}
+          <select 
+            value={priority} 
+            onChange={(e) => setPriority(e.target.value as any)} 
+            className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 text-black focus:outline-none focus:border-indigo-600"
+          >
             <option value="low">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>
@@ -70,7 +89,13 @@ export default function TaskForm({ onTaskCreated }: TaskFormProps) {
 
         <div>
           <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Due Date</label>
-          <input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:outline-none focus:border-indigo-600" />
+          {/* Added text-black utility below */}
+          <input 
+            type="date" 
+            value={dueDate} 
+            onChange={(e) => setDueDate(e.target.value)} 
+            className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 text-black focus:outline-none focus:border-indigo-600" 
+          />
         </div>
       </div>
 
