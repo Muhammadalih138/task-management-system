@@ -78,7 +78,7 @@ export default function TaskForm({ onTaskCreated }: TaskFormProps) {
           {/* Added text-black utility below */}
           <select 
             value={priority} 
-            onChange={(e) => setPriority(e.target.value as any)} 
+            onChange={(e) => setPriority(e.target.value as 'low' | 'medium' | 'high')} 
             className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 text-black focus:outline-none focus:border-indigo-600"
           >
             <option value="low">Low</option>

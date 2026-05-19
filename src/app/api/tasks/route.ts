@@ -12,7 +12,7 @@ export async function GET() {
 
     const tasks = await Task.find({ userId }).sort({ createdAt: -1 });
     return NextResponse.json({ success: true, tasks });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }
@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ success: true, task: newTask }, { status: 201 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }

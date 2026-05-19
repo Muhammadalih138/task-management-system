@@ -14,7 +14,7 @@ export async function getUserIdFromToken(): Promise<string | null> {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET || 'fallback_secret') as DecodedToken;
     return decoded.userId;
-  } catch (error) {
+  } catch {
     return null;
   }
 }

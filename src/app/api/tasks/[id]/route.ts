@@ -26,7 +26,7 @@ export async function PUT(request: Request, { params }: RouteParams) {
     if (!updatedTask) return NextResponse.json({ error: 'Task not found' }, { status: 404 });
 
     return NextResponse.json({ success: true, task: updatedTask });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }
@@ -44,7 +44,7 @@ export async function DELETE(request: Request, { params }: RouteParams) {
     if (!deletedTask) return NextResponse.json({ error: 'Task not found' }, { status: 404 });
 
     return NextResponse.json({ success: true, message: 'Task deleted successfully' });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }

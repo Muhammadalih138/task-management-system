@@ -23,17 +23,16 @@ export default function DashboardPage() {
     try {
       const res = await fetch('/api/tasks');
       const data = await res.json();
-      if (res.ok && data.success) {
-        setTasks(data.tasks);
-      }
-    } catch (err) {
-      console.error('Failed to parse active database connection collection tasks');
+      if (res.ok && data.success) setTasks(data.tasks);
+    } catch {
+      console.error('Failed to fetch tasks');
     } finally {
       setLoading(false);
     }
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchTasks();
   }, [fetchTasks]);
 
